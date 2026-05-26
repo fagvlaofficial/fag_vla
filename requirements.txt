@@ -1,0 +1,60 @@
+# =============================================================================
+# FAG-VLA — Python dependencies
+# =============================================================================
+# Install with:
+#   pip install -r requirements.txt
+#
+# Notes:
+#   - The `pi0.5` policy backbone is provided by LeRobot. If you already have
+#     a working pi0.5 / LeRobot environment, you can install on top of it.
+#   - LIBERO simulation, the PIPER arm SDK and the RealSense SDK are only
+#     required when you actually run those subsystems; they are listed at the
+#     bottom of this file and may be commented out if unused.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Core: tensor / graph / numerical stack
+# -----------------------------------------------------------------------------
+torch>=2.0.0
+torchvision>=0.15.0
+numpy>=1.24.0
+scipy>=1.10.0
+networkx>=3.0
+
+# -----------------------------------------------------------------------------
+# Tokenizer + LLM rewriter
+# -----------------------------------------------------------------------------
+transformers>=4.35.0          # PaliGemma tokenizer for token-segment math
+openai>=1.0.0                 # GPT-4o instruction rewriting (fag_online mode)
+
+# -----------------------------------------------------------------------------
+# Visualization (paper figures + diagnostic plots)
+# -----------------------------------------------------------------------------
+matplotlib>=3.7.0
+seaborn>=0.12.0
+pillow>=9.0.0
+
+# -----------------------------------------------------------------------------
+# Utilities
+# -----------------------------------------------------------------------------
+tqdm>=4.65.0
+einops>=0.7.0
+pyyaml>=6.0
+python-dotenv>=1.0.0          # loads .env for OPENAI_API_KEY etc.
+
+# -----------------------------------------------------------------------------
+# Policy backbone — install LeRobot from PyPI, or set LEROBOT_SRC env var to
+# point at a local checkout (see .env.example).
+# -----------------------------------------------------------------------------
+lerobot>=0.1.0
+
+# -----------------------------------------------------------------------------
+# Optional subsystems (uncomment as needed)
+# -----------------------------------------------------------------------------
+# LIBERO simulation benchmark — install from the official repo:
+#   pip install "libero @ git+https://github.com/Lifelong-Robot-Learning/LIBERO.git"
+
+# Real-robot stack (PIPER 6-DOF + RealSense D435i):
+# opencv-python>=4.8.0
+# pyrealsense2>=2.54.0
+# piper-sdk>=0.2.0

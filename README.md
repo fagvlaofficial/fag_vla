@@ -278,7 +278,7 @@ If you use FAG-VLA in your research, please cite:
 ```bibtex
 @misc{fagvla2026,
   title   = {FAG-VLA: Fused Attention Graphs for Adaptive Intervention in Vision-Language-Action Models},
-  author  = {Lei Gao},
+  author  = {Lei Gao and Gang Shen and Wenqiang Hu and Wenbin Chen and Hanhua Chen},
   year    = {2026},
   note    = {Huazhong University of Science and Technology},
   howpublished = {\url{https://github.com/<your-org>/FAG-VLA}}
@@ -303,4 +303,4 @@ This project builds directly on top of:
 
 Released under the [MIT License](LICENSE).
 
-Copyright © 2026 Lei Gao, Huazhong University of Science and Technology.
+Copyright © 2026 Lei Gao, Gang Shen, Wenqiang Hu, Wenbin Chen, Hanhua Chen, Huazhong University of Science and Technology.
